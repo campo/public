@@ -38,5 +38,6 @@ class Testing < Minitest::Test
     assert_equal [], merge_sort([])
     assert_equal [1], merge_sort([1])
     assert_equal [-2,-1,0,1,2], merge_sort([2,1,0,-1,-2])
+    assert_equal [-2,-2,-1,-1,0,0,1,1,2,2], merge_sort([2,2,1,1,0,0,-1,-1,-2,-2])
   end
 end
