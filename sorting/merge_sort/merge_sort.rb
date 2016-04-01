@@ -29,10 +29,14 @@ end
 
 class Testing < Minitest::Test
   def test_merge
+    assert_equal [], merge([],[])
+    assert_equal [1], merge([1],[])
     assert_equal [1,2,3,4,5,6], merge([1,4,6], [2,3,5])
   end
 
   def test_merge_sort
+    assert_equal [], merge_sort([])
+    assert_equal [1], merge_sort([1])
     assert_equal [-2,-1,0,1,2], merge_sort([2,1,0,-1,-2])
   end
 end
